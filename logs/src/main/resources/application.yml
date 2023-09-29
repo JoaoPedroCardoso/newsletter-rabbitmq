@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: logs
+  data:
+    mongodb:
+      port: 27017
+      host: localhost
+      database: logs
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+# Configuracao da porta do serviço de forma aleatoria
+server:
+  port: ${PORT:0}
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+newsletter:
+  rabbitmq:
+    exchange: newslatter.exchange
+    queue: newslatter.logs.queue
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG

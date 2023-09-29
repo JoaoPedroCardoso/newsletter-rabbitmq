@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "1baa433d-db3a-4351-9c8b-06fbcfe3fe11",
+		"name": "newslatter-ms-rabbitmq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29665887"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "news",
+					"item": [
+						{
+							"name": "GetNews",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/newsletter/api/v1/news",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"newsletter",
+										"api",
+										"v1",
+										"news"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetNews",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/newsletter/api/v1/news",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"newsletter",
+												"api",
+												"v1",
+												"news"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Sep 2023 22:54:12 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"65160368db176b1af4480c6a\",\n        \"title\": \"CNN Urgente\",\n        \"date\": \"2020-01-01\",\n        \"editorName\": \"Joao Pedro\",\n        \"posts\": [\n            {\n                \"title\": \"Noticia de ultima hora\",\n                \"authorName\": \"Joao pedro\",\n                \"body\": \"O calor ta de matar!\",\n                \"tags\": [\n                    {\n                        \"name\": \"Tag01\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GetNewsById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/newsletter/api/v1/news/id/65160368db176b1af4480c6a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"newsletter",
+										"api",
+										"v1",
+										"news",
+										"id",
+										"65160368db176b1af4480c6a"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetNewsById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/newsletter/api/v1/news/id/65160368db176b1af4480c6a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"newsletter",
+												"api",
+												"v1",
+												"news",
+												"id",
+												"65160368db176b1af4480c6a"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Sep 2023 22:54:56 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"65160368db176b1af4480c6a\",\n    \"title\": \"CNN Urgente\",\n    \"date\": \"2020-01-01\",\n    \"editorName\": \"Joao Pedro\",\n    \"posts\": [\n        {\n            \"title\": \"Noticia de ultima hora\",\n            \"authorName\": \"Joao pedro\",\n            \"body\": \"O calor ta de matar!\",\n            \"tags\": [\n                {\n                    \"name\": \"Tag01\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "CreateNews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"UFU UrgenteSSSSSS\",\r\n    \"date\": \"2022-01-01\",\r\n    \"editorName\": \"Anonimo\",\r\n    \"posts\": [\r\n    {\r\n        \"title\": \"UFU Noticia de ultima hora\",\r\n        \"authorName\": \"Anonimo\",\r\n        \"body\": \"A chuva ja vem ai!\",\r\n        \"tags\": [{\r\n            \"name\": \"TagUFU01\"\r\n        }]\r\n    }]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/newsletter/api/v1/news",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"newsletter",
+										"api",
+										"v1",
+										"news"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CreateNews",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"CNN Urgente\",\r\n    \"date\": \"2020-01-01\",\r\n    \"editorName\": \"Joao Pedro\",\r\n    \"posts\": [\r\n    {\r\n        \"title\": \"Noticia de ultima hora\",\r\n        \"authorName\": \"Joao pedro\",\r\n        \"body\": \"O calor ta de matar!\",\r\n        \"tags\": [{\r\n            \"name\": \"Tag01\"\r\n        }]\r\n    }]\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/newsletter/api/v1/news",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"newsletter",
+												"api",
+												"v1",
+												"news"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Sep 2023 22:54:31 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6516042712e1e2288c7d893d\",\n    \"title\": \"CNN Urgente\",\n    \"date\": \"2020-01-01\",\n    \"editorName\": \"Joao Pedro\",\n    \"posts\": [\n        {\n            \"title\": \"Noticia de ultima hora\",\n            \"authorName\": \"Joao pedro\",\n            \"body\": \"O calor ta de matar!\",\n            \"tags\": [\n                {\n                    \"name\": \"Tag01\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "UpdateNews",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"65160368db176b1af4480c6a\",\r\n    \"title\": \"CNN Urgente Atualizado\",\r\n    \"date\": \"2022-01-01\",\r\n    \"editorName\": \"Joao Vitor\",\r\n    \"posts\": [\r\n        {\r\n            \"title\": \"Noticia de ultima hora!!!\",\r\n            \"authorName\": \"Joao Vitor\",\r\n            \"body\": \"O calor ta de matar!!!\",\r\n            \"tags\": [\r\n                {\r\n                    \"name\": \"Tag01.01\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/newsletter/api/v1/news",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"newsletter",
+										"api",
+										"v1",
+										"news"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "UpdateNews",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"65160368db176b1af4480c6a\",\r\n    \"title\": \"CNN Urgente Atualizado\",\r\n    \"date\": \"2022-01-01\",\r\n    \"editorName\": \"Joao Vitor\",\r\n    \"posts\": [\r\n        {\r\n            \"title\": \"Noticia de ultima hora!!!\",\r\n            \"authorName\": \"Joao Vitor\",\r\n            \"body\": \"O calor ta de matar!!!\",\r\n            \"tags\": [\r\n                {\r\n                    \"name\": \"Tag01.01\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/newsletter/api/v1/news",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"newsletter",
+												"api",
+												"v1",
+												"news"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Sep 2023 22:56:20 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"65160368db176b1af4480c6a\",\n    \"title\": \"CNN Urgente Atualizado\",\n    \"date\": \"2022-01-01\",\n    \"editorName\": \"Joao Vitor\",\n    \"posts\": [\n        {\n            \"title\": \"Noticia de ultima hora!!!\",\n            \"authorName\": \"Joao Vitor\",\n            \"body\": \"O calor ta de matar!!!\",\n            \"tags\": [\n                {\n                    \"name\": \"Tag01.01\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "DeleteNewsById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/newsletter/api/v1/news/id/6516042712e1e2288c7d893d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"newsletter",
+										"api",
+										"v1",
+										"news",
+										"id",
+										"6516042712e1e2288c7d893d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "logs",
+					"item": [
+						{
+							"name": "GetLogs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/logs/api/v1/logs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"logs",
+										"api",
+										"v1",
+										"logs"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetLogs",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/logs/api/v1/logs",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"logs",
+												"api",
+												"v1",
+												"logs"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Sep 2023 23:53:22 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"65160dd3a321386f82cdd677\",\n        \"action\": \"created\",\n        \"date\": \"2023-09-28T23:31:49.373+00:00\",\n        \"object\": {\n            \"id\": \"65160ce54fe1234fb4578415\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160dd6a321386f82cdd678\",\n        \"action\": \"created\",\n        \"date\": \"2023-09-28T23:32:05.854+00:00\",\n        \"object\": {\n            \"id\": \"65160cf54fe1234fb4578416\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160dd7a321386f82cdd679\",\n        \"action\": \"findAll\",\n        \"date\": \"2023-09-28T23:32:08.157+00:00\",\n        \"object\": {\n            \"id\": \"65160368db176b1af4480c6a\",\n            \"title\": \"CNN Urgente Atualizado\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Joao Vitor\",\n            \"posts\": [\n                {\n                    \"title\": \"Noticia de ultima hora!!!\",\n                    \"authorName\": \"Joao Vitor\",\n                    \"body\": \"O calor ta de matar!!!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"Tag01.01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160dd9a321386f82cdd67a\",\n        \"action\": \"findAll\",\n        \"date\": \"2023-09-28T23:32:08.167+00:00\",\n        \"object\": {\n            \"id\": \"651608e4770f273270993335\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160ddaa321386f82cdd67b\",\n        \"action\": \"findAll\",\n        \"date\": \"2023-09-28T23:32:08.173+00:00\",\n        \"object\": {\n            \"id\": \"65160a36770f273270993336\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160ddaa321386f82cdd67c\",\n        \"action\": \"findAll\",\n        \"date\": \"2023-09-28T23:32:08.177+00:00\",\n        \"object\": {\n            \"id\": \"65160ce54fe1234fb4578415\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160ddba321386f82cdd67d\",\n        \"action\": \"findAll\",\n        \"date\": \"2023-09-28T23:32:08.183+00:00\",\n        \"object\": {\n            \"id\": \"65160cf54fe1234fb4578416\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160ddca321386f82cdd67e\",\n        \"action\": \"created\",\n        \"date\": \"2023-09-28T23:33:00.376+00:00\",\n        \"object\": {\n            \"id\": \"65160d2c4fe1234fb4578417\",\n            \"title\": \"IFTM Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"IFTM Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagIFTM01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"65160e19a321386f82cdd67f\",\n        \"action\": \"created\",\n        \"date\": \"2023-09-28T23:36:54.518+00:00\",\n        \"object\": {\n            \"id\": \"65160e164fe1234fb4578418\",\n            \"title\": \"UFU Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"UFU Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagUFU01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    },\n    {\n        \"id\": \"651611efed5fb372303f4371\",\n        \"action\": \"created\",\n        \"date\": \"2023-09-28T23:53:19.078+00:00\",\n        \"object\": {\n            \"id\": \"651611ef4fe1234fb4578419\",\n            \"title\": \"UFU Urgente\",\n            \"date\": \"2022-01-01\",\n            \"editorName\": \"Anonimo\",\n            \"posts\": [\n                {\n                    \"title\": \"UFU Noticia de ultima hora\",\n                    \"authorName\": \"Anonimo\",\n                    \"body\": \"A chuva ja vem ai!\",\n                    \"tags\": [\n                        {\n                            \"name\": \"TagUFU01\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"objectType\": \"class com.iftm.newsletter.models.dtos.NewsDTO\"\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
