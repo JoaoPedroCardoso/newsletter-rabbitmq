@@ -2,7 +2,7 @@ spring:
   application:
     name: newsletter
   profiles:
-    active: prod
+    active: dev
   config:
     import: optional:configserver:http://localhost:8888
   data:

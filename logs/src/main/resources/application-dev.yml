@@ -1,15 +1,15 @@
 spring:
   application:
-    name: newsletter
+    name: logs
   profiles:
-    active: prod
+    active: dev
   config:
     import: optional:configserver:http://localhost:8888
   data:
     mongodb:
       port: 27017
       host: localhost
-      database: newsletter
+      database: logs
   rabbitmq:
     host: localhost
     port: 5672
@@ -27,10 +27,9 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-newslatter:
+newsletter:
   rabbitmq:
     exchange: newslatter.exchange
-    rountingkey: newslatter.logs.rountingkey
     queue: newslatter.logs.queue
 
 logging:

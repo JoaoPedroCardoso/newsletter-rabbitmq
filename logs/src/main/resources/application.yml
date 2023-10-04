@@ -1,6 +1,10 @@
 spring:
   application:
     name: logs
+  profiles:
+    active: prod
+  config:
+    import: optional:configserver:http://localhost:8888
   data:
     mongodb:
       port: 27017
