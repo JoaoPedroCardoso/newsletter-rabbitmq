@@ -20,6 +20,9 @@ spring:
 server:
   port: ${PORT:0}
 
+firebase:
+  credential-file-name: firebase-account.json
+
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

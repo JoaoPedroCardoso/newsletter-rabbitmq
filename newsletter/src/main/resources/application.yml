@@ -20,6 +20,10 @@ spring:
 server:
   port: ${PORT:0}
 
+firebase:
+  credential-file-name: firebase-account.json
+  recipient-token: eQc0lsqCGoOBXxW95_k8Pr:APA91bEAa8vtT8Yqn6V2UOFOGyEa7anf0UxSi7DnaJXpg8nxBesUeEwGLDcc5pyP59R3-LkUWPAvAz8vAgaJAA60_Bgm_pjrDHzDQ-A2gg6jdT2Ak-9rPyX5X3K5XqG9L9TxZsC6yXi-
+
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
